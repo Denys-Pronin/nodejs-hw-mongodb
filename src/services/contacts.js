@@ -53,7 +53,7 @@ export const patchContact = async (
   payload,
   options = {},
 ) => {
-  const contact = await ContactsCollection.findByIdAndUpdate(
+  const contact = await ContactsCollection.findOneAndDelete(
     { _id: contactId, userId },
     payload,
     {
@@ -65,7 +65,7 @@ export const patchContact = async (
 };
 
 export const deleteContact = async (contactId, userId) => {
-  const contact = await ContactsCollection.findByIdAndDelete({
+  const contact = await ContactsCollection.findOneAndDelete({
     _id: contactId,
     userId,
   });
