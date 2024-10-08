@@ -2,6 +2,7 @@ import express from 'express';
 import pino from 'pino-http';
 import cors from 'cors';
 import { env } from './utils/env.js';
+import { UPLOAD_DIR } from './constants/index.js';
 
 import router from './routes/index.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
@@ -25,6 +26,7 @@ export const setupServer = () => {
   );
 
   app.use(router);
+  app.use('/uploads', express.static(UPLOAD_DIR));
   app.use('*', notFoundHandler);
   app.use(errorHandler);
 
