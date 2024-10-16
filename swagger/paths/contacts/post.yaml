@@ -15,11 +15,7 @@ requestBody:
         required:
           - name
           - phoneNumber
-          - email
-          - isFavourite
           - contactType
-          - userId
-          - photo
         properties:
           name:
             description: "Contact's name"
@@ -41,10 +37,6 @@ requestBody:
             description: "Contact's type"
             type: string
             enum: ['work', 'home', 'personal']
-          userId:
-            description: "Student's user id"
-            type: string
-            example: 66fbe6bc4ab8024b8a25dad1
           photo:
             description: "Link to contact's photo"
             type: string
