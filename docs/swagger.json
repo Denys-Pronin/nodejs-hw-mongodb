@@ -229,9 +229,9 @@
                     ]
                   },
                   "photo": {
-                    "description": "Link to contact's photo",
+                    "description": "Contact's photo",
                     "type": "string",
-                    "example": "binary"
+                    "format": "binary"
                   }
                 }
               }
@@ -395,9 +395,9 @@
                     ]
                   },
                   "photo": {
-                    "description": "Link to contact's photo",
+                    "description": "Contact's photo",
                     "type": "string",
-                    "example": "binary"
+                    "format": "binary"
                   }
                 }
               }
